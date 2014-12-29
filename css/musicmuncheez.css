@@ -1,7 +1,7 @@
 body {
 	font-family: 'Lato', sans-serif;
 	color: white;
-	background-color:black;
+	background-color:white;
 }
 
 span {
@@ -39,7 +39,8 @@ span {
 }
 
 .artist {
-	color:#BBB;
+  font-family: 'Oswald', sans-serif;
+  color:#2B4040;
 	font-size: 30px;
 	letter-spacing: 3px;
 	font-weight:normal;
