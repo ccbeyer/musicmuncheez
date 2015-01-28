@@ -132,7 +132,7 @@ span {
 /* formatting for the ticketing table */
 
 .tic-table {
-  width: 600px;
+  width: 400px;
   height: 175px;
   background-color: transparent;
   border-collapse: collapse;
@@ -168,6 +168,7 @@ span {
 
 .tic-table tbody {
   border-top: 2px solid #dddddd;
+  overflow: auto;
 }
 
 .tic-table {
@@ -304,4 +305,38 @@ span {
 }
 a.btn {
     text-decoration: none;
+}
+
+.soundcloud-button {
+  display: inline-block;
+  position: relative;
+  width: 110px;
+  height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #F76700;
+  background-image: linear-gradient(#F76700,#FA3219);
+  border-color: #C53421;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: none;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 12px;
+  white-space: nowrap;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  -webkit-writing-mode: horizontal-tb;
 }
