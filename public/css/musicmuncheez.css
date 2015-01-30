@@ -109,21 +109,21 @@ span {
 }
 
 /*border underneath artist name*/
-.table>thead>tr>th {
+.artist-table>thead>tr>th {
 	border-bottom: 0;
 }
 /*border underneath artist name*/
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+.artist-table>thead>tr>th, .artist-table>tbody>tr>th, .artist-table>tfoot>tr>th, .artist-table>thead>tr>td, .artist-table>tbody>tr>td, .artist-table>tfoot>tr>td {
 	border-top: 0px;
 }
 
-.table:after {
+.artist-table:after {
   	margin-top:15px;
   	content : "";
   	position: absolute;
   	left: 0;
   	height: 1px;
-  	width: 75%;  /* or 100px */
+  	width: 100%;  /* or 100px */
   	border-bottom:1px solid dimgray;
 }
 
@@ -136,8 +136,13 @@ span {
 
 /* formatting for the ticketing table */
 
+.ticket-table-div {
+  height:200px;
+  overflow:scroll;
+}
+
 .tic-table {
-  width: 400px;
+  width: 600px;
   height: 175px;
   background-color: transparent;
   border-collapse: collapse;
@@ -335,7 +340,7 @@ a.btn {
   font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
   font-weight: 100;
   text-align: center;
-  vertical-align: baseline;
+  vertical-align: middle;
   box-sizing: border-box;
   align-items: flex-start;
   text-rendering: auto;
@@ -345,3 +350,15 @@ a.btn {
   text-indent: 0px;
   -webkit-writing-mode: horizontal-tb;
 }
+
+.twitter-follow-button {
+  vertical-align: middle;
+}
+
+.fb-like {
+  vertical-align: middle;
+  height:20px;
+  top:-22px;
+}
+
+
