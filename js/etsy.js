@@ -1,38 +1,21 @@
 $.ajax({
-  url: 'http://api.seatgeek.com/2/events?q=g-eazy&callback=fireEvent',
+  url: "https://openapi.etsy.com/v2/listings/active.js?keywords=drake&limit=3&includes=Images:1&category=Clothing&sort_on=score&api_key=0oz57tcj01fxv0tcw2bgiaw2",
+  dataType: 'jsonp',
   success: function(data) {
-    var events = [];
-
-    events.push(['<tr>', 
-      '<th>' + "Date" + '</th>',
-      '<th>' + "Event" + '</th>',
-      '<th>' + "Starting From" + '</th>',
-      '<th>' + "Buy!" + '</th>',
-    '</tr>'
-    ].join("\n"));
-
-    // Make your html for the events table
-    $.each(data.events, function (i, evt) {
-      var lowest_price = evt.stats.lowest_price;
-      if (typeof lowest_price == "object") {
-        lowest_price = "Sold out!";
+    console.log("yes");
+    if (data.ok) {
+      $('#etsy-images').empty();
+      if (data.count > 0) {
+        $.each(data.results, function(i,item) {
+          $("<img/>").attr("src", item.Images[0].url_170x135).appendTo("#etsy-images").wrap(
+            "<a href='" + item.url + "'></a>");
+        });
       } else {
-        lowest_price = "$" + lowest_price;
+        ('<p>No results.</p>').appendTo('#etsy-images');
       }
-      events.push([
-        '<tr>', 
-          '<td>' + evt.datetime_local.split('T', 1).join("") + '</td>',
-          '<td><a href="' + evt.url + '">' + evt.title + '</a><br />' 
-          + evt.venue.name + '<br />' + evt.venue.city + ', ' + evt.venue.state + '</td>',
-          '<td>' + lowest_price + '</td>',
-          '<td><a href="' + evt.url + '" class="btn">Buy Tickets</a></td>',
-        '</tr>'
-      ].join("\n"));
-    });
-
-    //console.log(events);
-    $(".events").append(events.join("\n"));
-  },
-  
-  dataType: 'jsonp'
+    } else {
+      $('#etsy-images').empty();
+      alert(data.error);
+    }
+  }
 });

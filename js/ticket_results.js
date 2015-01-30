@@ -1,5 +1,5 @@
 $.ajax({
-  url: 'http://api.seatgeek.com/2/events?q=g-eazy&callback=fireEvent',
+  url: 'http://api.seatgeek.com/2/events?q=wiz khalifa&callback=fireEvent',
   success: function(data) {
     var events = [];
 
