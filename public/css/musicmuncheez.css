@@ -12,7 +12,7 @@ span {
 	font-size: 20px;
 	font-weight: lighter;
 	background-color: #333;
-	border-left: 1px solid #666; 
+	border-left: 1px solid #666;
 	color: white;
 }
 
@@ -20,8 +20,13 @@ span {
 	color:white;
 }
 
+.nav>li>a:hover {
+  color:black;
+  border-bottom: 1px solid #eee;
+}
+
 .navbar-panel {
-	border-right: 1px solid #666;
+	border-right: 1px solid #eee;
 }
 
 .navbar-default{
@@ -104,20 +109,15 @@ span {
 }
 
 /*border underneath artist name*/
-.artist-table>thead>tr>th {
+.table>thead>tr>th {
 	border-bottom: 0;
 }
 /*border underneath artist name*/
-.artist-table>thead>tr>th, .artist-table>tbody>tr>th, .artist-table>tfoot>tr>th, .artist-table>thead>tr>td>.merch, .artist-table>tbody>tr>td.merch, .artist-table>tfoot>tr>td.merch {
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
 	border-top: 0px;
 }
 
-.ticket-table-div {
-  height:200px;
-  overflow:scroll;
-}
-
-.artist-table:after {
+.table:after {
   	margin-top:15px;
   	content : "";
   	position: absolute;
@@ -136,9 +136,8 @@ span {
 
 /* formatting for the ticketing table */
 
-
 .tic-table {
-  width: 700px;
+  width: 400px;
   height: 175px;
   background-color: transparent;
   border-collapse: collapse;
@@ -336,7 +335,7 @@ a.btn {
   font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
   font-weight: 100;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: baseline;
   box-sizing: border-box;
   align-items: flex-start;
   text-rendering: auto;
@@ -345,14 +344,4 @@ a.btn {
   text-transform: none;
   text-indent: 0px;
   -webkit-writing-mode: horizontal-tb;
-}
-
-.twitter-follow-button {
-  vertical-align: middle;
-}
-
-.fb-like {
-  height:20px;
-  margin-top:-43px;
-  vertical-align: middle;
 }
