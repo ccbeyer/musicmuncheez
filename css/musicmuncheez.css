@@ -12,7 +12,7 @@ span {
 	font-size: 20px;
 	font-weight: lighter;
 	background-color: #333;
-	border-left: 1px solid #666; 
+	border-left: 1px solid #666;
 	color: white;
 }
 
@@ -20,8 +20,13 @@ span {
 	color:white;
 }
 
+.nav>li>a:hover {
+  color:black;
+  border-bottom: 1px solid #eee;
+}
+
 .navbar-panel {
-	border-right: 3px solid #999;
+	border-right: 1px solid #eee;
 }
 
 .navbar-default{
