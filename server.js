@@ -1,7 +1,9 @@
-var http = require("http");
-
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
-  response.end();
-}).listen(8888);
+var express = require('express');
+ 
+var server = express();
+server.use(express.static(__dirname + '/public'));
+ 
+var port = 8888;
+server.listen(port, function() {
+    console.log('server listening on port ' + port);
+});
